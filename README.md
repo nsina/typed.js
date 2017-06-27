@@ -1,5 +1,6 @@
 <img src="/logo-cropped.png" width="450px" title="Typed.js" />
-========
+
+### Notice: development on master is currently halted for the upcoming release of v2.0 on [#264](https://github.com/mattboldt/typed.js/pull/264)
 
 [View the live demo](http://www.mattboldt.com/demos/typed-js/) | [Go to my site, mattboldt.com](http://www.mattboldt.com)
 
@@ -97,6 +98,8 @@ https://envato.com/
 https://productmap.co/
 
 https://www.typed.com/
+
+https://apeiron.io
 
 https://git.market/
 
@@ -205,7 +208,7 @@ Typed.new(".element", {
 	// Fade out instead of backspace (must use CSS class)
 	fadeOut: false,
 	fadeOutClass: 'typed-fade-out',
-	fadeOutSpeed: 500, // milliseconds
+	fadeOutDelay: 500, // milliseconds
 	// loop
 	loop: false,
 	// null = infinite
@@ -268,6 +271,7 @@ Then, once you've made your edits:
 
 This will create a minified version in `/dist`
 
+or simply use `gulp watch` for automatic change detection
 
 end
 ---

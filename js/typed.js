@@ -127,8 +127,21 @@
 				// shuffle the array if true
 				if(self.shuffle) self.sequence = self.shuffleArray(self.sequence);
 
+				var elContent;
+				if (self.isInput) {
+					elContent = self.el.value;
+				} else if (self.contentType === 'html') {
+					elContent = self.el.innerHTML;
+				} else {
+					elContent = self.el.textContent;
+				}
 				// Start typing
-				self.typewrite(self.strings[self.sequence[self.arrayPos]], self.strPos);
+				// Check if there is some text in the element, if yes start by backspacing the default message
+				if (elContent.length == 0) {
+					self.typewrite(self.strings[self.sequence[self.arrayPos]], self.strPos);
+				} else {
+					self.backspace(elContent, elContent.length);
+				}
 			}, self.startDelay);
 		},
 
@@ -361,8 +374,15 @@
 			this.cursor.className += ' ' + this.fadeOutClass;
 			return setTimeout(function() {
 				self.arrayPos++;
-				self.replaceText('')
-				self.typewrite(self.strings[self.sequence[self.arrayPos]], 0);
+				self.replaceText('');
+
+				// Resets current string if end of loop reached
+				if(self.strings.length > self.arrayPos) {
+					self.typewrite(self.strings[self.sequence[self.arrayPos]], 0);
+				} else {
+					self.typewrite(self.strings[0], 0);
+					self.arrayPos = 0;
+				}
 			}, self.fadeOutDelay);
 		},
 
