@@ -1,18 +1,18 @@
 /**
  * Declaration for typed.js
- * Typed.js version: v2.0.11
+ * Typed.js version: v2.0.12
  */
 
 declare module 'typed.js' {
-  interface TypedOptions {
+  export interface TypedOptions {
     /**
      * strings to be typed
      */
     strings?: string[];
     /**
-     * ID of element containing string children
+     * ID or instance of HTML element of element containing string children
      */
-    stringsElement?: string;
+    stringsElement?: string | Element;
     /**
      * type speed in milliseconds
      */
@@ -48,7 +48,7 @@ declare module 'typed.js' {
     /**
      * Fade out delay in milliseconds
      */
-    fadeOutDelay?: boolean;
+    fadeOutDelay?: number;
     /**
      * loop strings
      */
@@ -124,7 +124,7 @@ declare module 'typed.js' {
   }
 
   export default class Typed {
-    constructor(elementId: string, options: TypedOptions);
+    constructor(elementId: string | Element, options: TypedOptions);
     toggle(): void;
     stop(): void;
     start(): void;

@@ -25,7 +25,7 @@ bower install typed.js
 #### CDN
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 ```
 
 #### Setup
@@ -43,6 +43,20 @@ var options = {
 
 var typed = new Typed('.element', options);
 ```
+
+### Use with ReactJS
+
+Hook-based function component: https://jsfiddle.net/mattboldt/60h9an7y/
+
+Class component: https://jsfiddle.net/mattboldt/ovat9jmp/
+
+### Use with Vue.js
+
+Check out the Vue.js component: https://github.com/Orlandster/vue-typed-js
+
+### Use it as WebComponent
+
+Check out the WebComponent: https://github.com/Orlandster/wc-typed-js
 
 ## Wonderful sites that have used (or are using) Typed.js
 
@@ -129,7 +143,7 @@ var typed = new Typed('.element', {
 
 ### CSS
 
-CSS animations are built upon initialzation in JavaScript. But, you can customize them at your will! These classes are:
+CSS animations are built upon initialization in JavaScript. But, you can customize them at your will! These classes are:
 
 ```css
 /* Cursor */
@@ -140,18 +154,6 @@ CSS animations are built upon initialzation in JavaScript. But, you can customiz
 .typed-fade-out {
 }
 ```
-
-### Use with ReactJS
-
-Check out this example React app using Typed.js in a component: https://jsfiddle.net/mattboldt/ovat9jmp/
-
-### Use with Vue.js
-
-Check out the Vue.js component: https://github.com/Orlandster/vue-typed-js
-
-### Use it as WebComponent
-
-Check out the WebComponent: https://github.com/Orlandster/wc-typed-js
 
 ## Customization
 
@@ -320,7 +322,7 @@ var typed = new Typed('.element', {
 
 ## end
 
-Thanks for checking this out. If you have any questions, I'll be on [Twitter](http://www.twitter.com/atmattb).
+Thanks for checking this out. If you have any questions, I'll be on [Twitter](https://twitter.com/atmattb).
 
 If you're using this, let me know! I'd love to see it.
 
